@@ -1,0 +1,26 @@
+﻿{
+    "payload":  {
+                    "array":  false,
+                    "bigDecimal":  false,
+                    "bigInteger":  false,
+                    "binary":  false,
+                    "boolean":  false,
+                    "containerNode":  true,
+                    "double":  false,
+                    "empty":  false,
+                    "float":  false,
+                    "floatingPointNumber":  false,
+                    "int":  false,
+                    "integralNumber":  false,
+                    "long":  false,
+                    "missingNode":  false,
+                    "nodeType":  "OBJECT",
+                    "null":  false,
+                    "number":  false,
+                    "object":  true,
+                    "pojo":  false,
+                    "short":  false,
+                    "textual":  false,
+                    "valueNode":  false
+                }
+}

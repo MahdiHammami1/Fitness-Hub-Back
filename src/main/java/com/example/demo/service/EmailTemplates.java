@@ -262,6 +262,60 @@ public class EmailTemplates {
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;");
   }
 
+  // ...existing code...
+
+  // --- Verification and Password Reset Templates ---
+
+  public static String emailVerification(String name, String verificationCode) {
+    String content = """
+      <p style="margin:0 0 14px 0;color:#EDEDED;line-height:1.6;">
+        Bonjour <b>%s</b>,<br>
+        Bienvenue chez Wouhouch Hub ! Pour finaliser votre inscription, veuillez vérifier votre adresse email.
+      </p>
+
+      <div style="background:#0b0b0b;border:1px solid #1f1f1f;border-radius:12px;padding:14px 16px;margin:14px 0;">
+        <div style="font-size:12px;color:#BDBDBD;margin-bottom:6px;">Code de vérification</div>
+        <div style="font-size:24px;font-weight:700;color:#E10600;letter-spacing:2px;text-align:center;padding:12px;">
+          %s
+        </div>
+        <div style="font-size:12px;color:#BDBDBD;text-align:center;margin-top:8px;">
+          Ce code expire dans 24 heures
+        </div>
+      </div>
+
+      <p style="margin:14px 0 0 0;color:#BDBDBD;line-height:1.6;">
+        Si vous n'avez pas créé de compte, ignorez simplement cet email.
+      </p>
+    """.formatted(escape(name), escape(verificationCode));
+
+    return shell("Vérification de votre compte", "Sécurité • Wouhouch Hub", content);
+  }
+
+  public static String passwordReset(String name, String resetCode) {
+    String content = """
+      <p style="margin:0 0 14px 0;color:#EDEDED;line-height:1.6;">
+        Bonjour <b>%s</b>,<br>
+        Nous avons reçu une demande de réinitialisation de votre mot de passe.
+      </p>
+
+      <div style="background:#0b0b0b;border:1px solid #1f1f1f;border-radius:12px;padding:14px 16px;margin:14px 0;">
+        <div style="font-size:12px;color:#BDBDBD;margin-bottom:6px;">Code de réinitialisation</div>
+        <div style="font-size:24px;font-weight:700;color:#E10600;letter-spacing:2px;text-align:center;padding:12px;">
+          %s
+        </div>
+        <div style="font-size:12px;color:#BDBDBD;text-align:center;margin-top:8px;">
+          Ce code expire dans 30 minutes
+        </div>
+      </div>
+
+      <p style="margin:14px 0 0 0;color:#BDBDBD;line-height:1.6;">
+        Si vous n'avez pas demandé la réinitialisation de votre mot de passe, ignorez simplement cet email.
+      </p>
+    """.formatted(escape(name), escape(resetCode));
+
+    return shell("Réinitialisation de votre mot de passe", "Sécurité • Wouhouch Hub", content);
+  }
+
   // --- Contact templates ---
   public static String contactConfirmation(String name, String email, String subject, String message) {
     String content = """

@@ -30,6 +30,8 @@ public class Product {
 
     private Boolean isActive;
 
+    private Integer displayOrder; // order position for display/sorting
+
     private Instant createdAt;
     private Instant updatedAt;
 }

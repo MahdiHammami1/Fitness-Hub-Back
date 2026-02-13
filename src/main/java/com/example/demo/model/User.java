@@ -28,6 +28,8 @@ public class User {
 
     private Boolean enabled = true;
 
+    private String authProvider; // "local", "google", etc.
+
     private Instant termsAcceptedAt;
 
     private Instant createdAt;

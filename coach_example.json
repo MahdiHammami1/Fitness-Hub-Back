@@ -1,0 +1,19 @@
+{
+  "fullName": "Amine Bennani",
+  "title": "Nutrition Coach & Specialist",
+  "domain": "Nutrition & Recovery",
+  "imageUrl": "https://example.com/amine-bennani.jpg",
+  "bio": "Amine is a passionate nutrition specialist with 8 years of experience in sports nutrition and dietary optimization. He believes that nutrition is the foundation of any successful fitness journey and works closely with clients to create sustainable eating habits.\n\nHis approach combines science-based nutrition principles with practical, real-world solutions. Amine has helped hundreds of clients achieve their goals through personalized meal planning and nutritional coaching.",
+  "quote": "You can't out-train a bad diet. Nutrition is the foundation of transformation.",
+  "experienceYears": 8,
+  "clientsTransformed": 80,
+  "eventsHosted": 15,
+  "satisfactionRate": 95,
+  "certifications": [
+    "Precision Nutrition Level 2",
+    "ISSN Sports Nutrition Specialist",
+    "NASM-CNC Nutrition Certification",
+    "Behavior Change Specialist"
+  ]
+}
+
